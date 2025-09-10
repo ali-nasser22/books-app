@@ -18,7 +18,9 @@
     <ul class="list">
         @foreach($books as $book)
             <li class="flex flex-col items-start justify-center" wire:key="{{$book->id}}">
-                <h3>Title: <span class="font-extrabold">{{$book->title}}</span></h3>
+                <a class="hover:underline hover:text-sky-600" href="{{ route('book',$book) }}"><h3>Title: <span
+                            class="font-extrabold">{{$book->title}}</span>
+                    </h3></a>
                 <h4>Author: <span class="font-extrabold">{{$book->author}}</span></h4>
                 <p>Rating: <span class="font-extrabold">{{$book->rating}}/5</span></p>
                 <div class="flex justify-center items-center gap-2">

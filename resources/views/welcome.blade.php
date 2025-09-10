@@ -1,5 +1,3 @@
-@extends('layout.app')
-
-@section('content')
+<x-layouts.app>
     @livewire('book-list')
-@endsection
+</x-layouts.app>
