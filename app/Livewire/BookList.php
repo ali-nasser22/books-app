@@ -21,7 +21,7 @@ class BookList extends Component
     public function render(): View
     {
 
-        $books = Book::simplePaginate(10);
+        $books = Book::orderBy('created_at', 'desc')->simplePaginate(10);
         $count = $books->count();
 
         return view('livewire.book-list', ['books' => $books, 'count' => $count]);
